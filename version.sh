@@ -1,13 +1,12 @@
 #!/bin/sh -e
-V="$1"
-if [ -z "$1" ]; then
-  V=$(git describe --tags --always 2>/dev/null)
-fi
 
-VFILE=version.go
+VFILE=util/version.go
 
-echo "// Updated automatically (altered manually just prior to each release)" > $VFILE
+echo "// Updated automatically" > $VFILE
+echo "package util" >> $VFILE
 echo "" >> $VFILE
-echo "package main" >> $VFILE
-echo "" >> $VFILE
-echo "const appVersion = \"$V\"" >> $VFILE
+echo "const Version    = \"$(git describe --tags --dirty 2>/dev/null)\"" >> $VFILE
+#echo "const CommitHash = \"$(git rev-parse --short HEAD 2>/dev/null)\"" >> $VFILE
+echo "const GitBranch  = \"$(git symbolic-ref -q --short HEAD 2>/dev/null)\"" >> $VFILE
+echo "const GitOrigin  = \"$(git remote get-url origin 2>/dev/null)\"" >> $VFILE
+echo "const BuildDate  = \"$(date '+%FT%T')\"" >> $VFILE

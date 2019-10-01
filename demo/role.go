@@ -1,14 +1,14 @@
 package demo
 
 import (
-	"database/sql/driver"
 	"fmt"
+	"database/sql/driver"
 )
 
 type Role int8
 
 const (
-	Unknown Role = iota
+	Unknown   Role = iota
 	UserRole
 	AdminRole
 )
@@ -56,3 +56,4 @@ func (r *Role) Scan(value interface{}) error {
 func (r Role) Value() (driver.Value, error) {
 	return r.String(), nil
 }
+

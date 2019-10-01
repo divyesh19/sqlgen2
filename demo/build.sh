@@ -1,88 +1,52 @@
 #!/bin/bash -e
 cd $(dirname $0)
 
-PATH=$PWD/..:$HOME/go/bin:$PATH
+PATH=$HOME/gopath/bin:$GOPATH/bin:$PATH
 
-rm -f *_sql.go *_sql.json
+[ -n "$OFFLINE" ] || . ../go-get.sh
+
+rm -f *_sql.go
 
 go generate .
 
 # also...
 
 # These demonstrate the various filters that control what methods are generated
-sqlgen -type demo.User -o user_ex_xxxxxxxxx_sql.go -v -prefix X -json         user.go role.go
-sqlgen -type demo.User -o user_ex_Exxxxxxxx_sql.go -v -prefix E -exec=true    user.go role.go
-sqlgen -type demo.User -o user_ex_xQxxxxxxx_sql.go -v -prefix Q -query=true   user.go role.go
-sqlgen -type demo.User -o user_ex_xxIxxxxxx_sql.go -v -prefix I -create=true  user.go role.go
-sqlgen -type demo.User -o user_ex_xxxCxxxxx_sql.go -v -prefix C -count=true   user.go role.go
-sqlgen -type demo.User -o user_ex_xxxxSxxxx_sql.go -v -prefix S -select=true  user.go role.go
-sqlgen -type demo.User -o user_ex_xxxxxUxxx_sql.go -v -prefix U -update=true  user.go role.go
-sqlgen -type demo.User -o user_ex_xxxxxxPxx_sql.go -v -prefix P -upsert=true  user.go role.go
-sqlgen -type demo.User -o user_ex_xxxxxxxDx_sql.go -v -prefix D -delete=true  user.go role.go
-sqlgen -type demo.User -o user_ex_xxxxxxxxL_sql.go -v -prefix L -slice=true   user.go role.go
-sqlgen -type demo.User -o user_ex_EQICRUPDL_sql.go -v -prefix A -all          user.go role.go
+sqlgen -type demo.User -o user_ex_xxxxx_sql.go -v -prefix X -schema=false                                                                    user.go role.go
+sqlgen -type demo.User -o user_ex_Cxxxx_sql.go -v -prefix C -schema=false -create=true  -read=false -update=false -delete=false -slice=false user.go role.go
+sqlgen -type demo.User -o user_ex_xRxxx_sql.go -v -prefix R -schema=false -create=false -read=true  -update=false -delete=false -slice=false user.go role.go
+sqlgen -type demo.User -o user_ex_xxUxx_sql.go -v -prefix U -schema=false -create=false -read=false -update=true  -delete=false -slice=false user.go role.go
+sqlgen -type demo.User -o user_ex_xxxDx_sql.go -v -prefix D -schema=false -create=false -read=false -update=false -delete=true  -slice=false user.go role.go
+sqlgen -type demo.User -o user_ex_xxxxS_sql.go -v -prefix S -schema=false -create=false -read=false -update=false -delete=false -slice=true  user.go role.go
+sqlgen -type demo.User -o user_ex_CRUDS_sql.go -v -prefix A -schema=false -all user.go role.go
 
-# incomplete trial of sub-directory output
-#mkdir -p sub
-#sqlgen -type demo.Hook -pkg github.com/rickb777/sqlgen2/demo -o sub/xhook_sql.go -list demo.HookList -all -v .
+unset GO_DRIVER GO_DSN
 
-unset GO_DRIVER GO_DSN GO_QUOTER
+echo
+echo SQLite3...
+echo go test .
+go test .
 
-export DB_CONNECT_TIMEOUT=1s
-export PGHOST=localhost
-export PGDATABASE=test
-export PGUSER PGPASSWORD
-if [[ -z $PGUSER ]]; then
-  PGUSER=testuser
-  PGPASSWORD=TestPasswd.9.9.9
-fi
-
-DBS=$@
-if [ "$1" = "all" ]; then
-  DBS="sqlite mysql postgres pgx"
-fi
-
-for db in $DBS; do
+for db in $@; do
   echo
-  go clean -testcache ||:
-
   case $db in
     mysql)
-      echo
-      echo "MySQL...."
-      GO_DRIVER=mysql GO_DSN="$PGUSER:$PGPASSWORD@/test" go test -v .
+      echo MySQL....
+      echo go test .
+      GO_DRIVER=mysql GO_DSN=testuser:TestPasswd9@/test go test .
       ;;
 
     postgres)
-      echo
-      echo "PostgreSQL (no quotes)...."
-      GO_DRIVER=postgres GO_DSN="postgres://$PGUSER:$PGPASSWORD@/test" GO_QUOTER=none go test -v . ||:
-      echo
-      echo "PostgreSQL (ANSI)...."
-      GO_DRIVER=postgres GO_DSN="postgres://$PGUSER:$PGPASSWORD@/test" GO_QUOTER=ansi go test -v . ||:
+      echo PostgreSQL....
+      echo go test .
+      GO_DRIVER=postgres GO_DSN="postgres://testuser:TestPasswd9@/test" go test .
       ;;
 
-    pgx)
-      echo
-      echo "PGX (no quotes)...."
-      GO_DRIVER=pgx GO_DSN="postgres://$PGUSER:$PGPASSWORD@/test" GO_QUOTER=none go test -v . ||:
-      echo
-      echo "PGX (ANSI)...."
-      GO_DRIVER=pgx GO_DSN="postgres://$PGUSER:$PGPASSWORD@/test" GO_QUOTER=ansi go test -v . ||:
-      ;;
-
-    sqlite)
-      unset GO_DRIVER GO_DSN
-      echo
-      echo "SQLite3 (no quotes)..."
-      GO_QUOTER=none go test -v .
-      echo
-      echo "SQLite3 (ANSI)..."
-      GO_QUOTER=ansi go test -v .
+    sqlite) # default - see above
       ;;
 
     *)
-      echo "$db: unrecognised; must be sqlite, mysql, or postgres. Use 'all' for all of these."
+      echo "$db: unrecognised; must be sqlite, mysql, or postgres"
       exit 1
       ;;
   esac
