@@ -2,8 +2,7 @@ package schema
 
 import (
 	"fmt"
-	"
-github.com/divyesh19/sqlgen2/parse"
+	"github.com/divyesh19/sqlgen2/parse"
 	"io"
 )
 
