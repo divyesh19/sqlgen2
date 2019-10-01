@@ -1,4 +1,5 @@
-module github.com/rickb777/sqlgen2
+module 
+github.com/divyesh19/sqlgen2
 
 require (
 	bitbucket.org/pkg/inflect v0.0.0-20130829110746-8961c3750a47

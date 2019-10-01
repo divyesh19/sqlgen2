@@ -3,7 +3,8 @@ package where_test
 import (
 	"reflect"
 	"testing"
-	. "github.com/rickb777/sqlgen2/where"
+	. "
+github.com/divyesh19/sqlgen2/where"
 	"
 github.com/divyesh19/sqlgen2/schema"
 )

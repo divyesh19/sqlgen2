@@ -11,7 +11,8 @@ You are expected to understand your own database; *sqlgen* removes the hard work
 
 Then, *sqlgen* generates code that maps these onto the corresponding database tables.
 
-Consider these two structs, both of which are in the [demo](https://github.com/rickb777/sqlgen2/tree/master/demo) package.
+Consider these two structs, both of which are in the [demo](https://
+github.com/divyesh19/sqlgen2/tree/master/demo) package.
 
 ```Go
 type User struct {
@@ -80,7 +81,8 @@ The two generated structs are related to a provided type called `Database`.
 
 ![database-and-tables](database-and-tables.png)
 
-You normally have exactly one [`*Database`](https://godoc.org/github.com/rickb777/sqlgen2#Database) in your app for each `*sql.DB` connection. The `*Database` also holds the query logger (if you need one).
+You normally have exactly one [`*Database`](https://godoc.org/
+github.com/divyesh19/sqlgen2#Database) in your app for each `*sql.DB` connection. The `*Database` also holds the query logger (if you need one).
 
 Although `UserTable` and `AddressTable` both implement the `sqlgen2.Table` interface, they are not directly related to each other. By convention, they are passed by copy instead of as pointers. This allows some fluent methods to make local alterations - especially the `WithPrefix` and `WithContext` methods (e.g. in [address_sql.go](../demo/address_sql.go)).
 
@@ -228,11 +230,13 @@ You will probably find it helpful to use `-kind View`, which will cause your gen
 
 ## The API
 
-Package `github.com/rickb777/sqlgen2/require` provides:
+Package `
+github.com/divyesh19/sqlgen2/require` provides:
 
  * requirements that specify the expected size of the result set, or the number of rows affected, as appropriate.  
 
-Package `github.com/rickb777/sqlgen2/where` provides:
+Package `
+github.com/divyesh19/sqlgen2/where` provides:
 
  * a builder API for 'where' clauses
  * query constraints  

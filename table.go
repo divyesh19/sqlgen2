@@ -2,10 +2,12 @@ package sqlgen2
 
 import (
 	"database/sql"
-	"github.com/rickb777/sqlgen2/require"
+	"
+github.com/divyesh19/sqlgen2/require"
 	"
 github.com/divyesh19/sqlgen2/schema"
-	"github.com/rickb777/sqlgen2/where"
+	"
+github.com/divyesh19/sqlgen2/where"
 	"log"
 	"context"
 )

@@ -17,7 +17,8 @@ github.com/divyesh19/sqlgen2/parse/exit"
 	"testing"
 )
 
-const demoPath = "github.com/rickb777/sqlgen2/demo"
+const demoPath = "
+github.com/divyesh19/sqlgen2/demo"
 
 func TestParseAndLoad_types_with_all_fields_unexported_but_not_ScannerValuer(t *testing.T) {
 	exit.TestableExit()
@@ -533,7 +534,8 @@ func TestParseAndLoad_embedded_types_in_different_packages(t *testing.T) {
 	Debug = true
 	code := strings.Replace(`package pkg1
 
-import "github.com/rickb777/sqlgen2/demo"
+import "
+github.com/divyesh19/sqlgen2/demo"
 
 type Example struct {
 	Cat1     demo.Category
@@ -592,7 +594,8 @@ func TestParseAndLoad_multiple_packages_with_primary_and_indexes(t *testing.T) {
 	code := strings.Replace(`package pkg1
 
 import (
-	"github.com/rickb777/sqlgen2/demo"
+	"
+github.com/divyesh19/sqlgen2/demo"
 	"math/big"
 	"time"
 )

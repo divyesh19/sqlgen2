@@ -7,15 +7,18 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 	_ "github.com/go-sql-driver/mysql"
 	_ "github.com/lib/pq"
-	"github.com/rickb777/sqlgen2"
+	"
+github.com/divyesh19/sqlgen2"
 	"
 github.com/divyesh19/sqlgen2/schema"
 	"log"
 	"os"
 	"strings"
 	"fmt"
-	"github.com/rickb777/sqlgen2/vanilla"
-	"github.com/rickb777/sqlgen2/constraint"
+	"
+github.com/divyesh19/sqlgen2/vanilla"
+	"
+github.com/divyesh19/sqlgen2/constraint"
 )
 
 var db *sql.DB

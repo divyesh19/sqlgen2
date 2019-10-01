@@ -9,7 +9,8 @@ github.com/divyesh19/sqlgen2/util"
 	"context"
 	"database/sql"
 	"strings"
-	"github.com/rickb777/sqlgen2/require"
+	"
+github.com/divyesh19/sqlgen2/require"
 	"sync/atomic"
 )
 

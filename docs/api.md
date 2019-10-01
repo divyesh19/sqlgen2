@@ -5,16 +5,26 @@ Part of the code you'll be working with is auto-generated; the rest is the core 
 
 ## The core API
 
-Unlike the generated API, the core API is not auto-generated. It's summarised in [package sqlgen2](https://godoc.org/github.com/rickb777/sqlgen2) and [execer.go](https://github.com/rickb777/sqlgen2/blob/master/execer.go). See the interfaces [Table](https://godoc.org/github.com/rickb777/sqlgen2#Table), [TableCreator](https://godoc.org/github.com/rickb777/sqlgen2#TableCreator), [TableWithIndexes](https://godoc.org/github.com/rickb777/sqlgen2#TableWithIndexes), and especially [TableWithCrud](https://godoc.org/github.com/rickb777/sqlgen2#TableWithCrud).
+Unlike the generated API, the core API is not auto-generated. It's summarised in [package sqlgen2](https://godoc.org/
+github.com/divyesh19/sqlgen2) and [execer.go](https://
+github.com/divyesh19/sqlgen2/blob/master/execer.go). See the interfaces [Table](https://godoc.org/
+github.com/divyesh19/sqlgen2#Table), [TableCreator](https://godoc.org/
+github.com/divyesh19/sqlgen2#TableCreator), [TableWithIndexes](https://godoc.org/
+github.com/divyesh19/sqlgen2#TableWithIndexes), and especially [TableWithCrud](https://godoc.org/
+github.com/divyesh19/sqlgen2#TableWithCrud).
 
 But these interfaces are only part of the story. Where appropriate, the methods are type-safe. So, `Query` returns `[]User` (in the case of supporting the type `User`).
 
-Because of the nature of Go's interfaces, the type-safe methods aren't expressly listed in the `TableWithCrud` interface. It's really useful to examine the generated code directly, in order to understand what's going on. There are some examples in the `demo` folder - see in particular [**user_sql.go**](https://github.com/rickb777/sqlgen2/blob/master/demo/user_sql.go), also [**shown here**](https://godoc.org/github.com/rickb777/sqlgen2/demo#DbUserTable).
+Because of the nature of Go's interfaces, the type-safe methods aren't expressly listed in the `TableWithCrud` interface. It's really useful to examine the generated code directly, in order to understand what's going on. There are some examples in the `demo` folder - see in particular [**user_sql.go**](https://
+github.com/divyesh19/sqlgen2/blob/master/demo/user_sql.go), also [**shown here**](https://godoc.org/
+github.com/divyesh19/sqlgen2/demo#DbUserTable).
  
 
 ## Declarative requirements
 
-Package [github.com/rickb777/sqlgen2/require](https://godoc.org/github.com/rickb777/sqlgen2/require) provides:
+Package [
+github.com/divyesh19/sqlgen2/require](https://godoc.org/
+github.com/divyesh19/sqlgen2/require) provides:
 
  * requirements that specify the expected size of the result set, or the number of rows affected, as appropriate.  
 
@@ -32,7 +42,9 @@ The requirement can easily be ignored: just set it to nil. But it is often very 
 
 ## Where-expressions
 
-Package [github.com/rickb777/sqlgen2/where](https://godoc.org/github.com/rickb777/sqlgen2/where) provides two related things:
+Package [
+github.com/divyesh19/sqlgen2/where](https://godoc.org/
+github.com/divyesh19/sqlgen2/where) provides two related things:
 
  * a builder API for 'where' clauses
  * query constraints  
@@ -62,7 +74,8 @@ Select, Count, Update and Delete methods also accept query constraints as parame
 
 The generated API contains a useful range of data-definition methods (create table, etc) and data-manipulation methods that are specialised for the Go type and its corresponding database table. The data-manipulation methods are all specialisations of Query and Exec. Query is the only method that is always included.
 
-A good example of the generated code is in [demo.AddressTable](https://godoc.org/github.com/rickb777/sqlgen2/demo#AddressTable).
+A good example of the generated code is in [demo.AddressTable](https://godoc.org/
+github.com/divyesh19/sqlgen2/demo#AddressTable).
 
 
 ### Get methods

@@ -9,19 +9,14 @@ import (
 	"strings"
 	"time"
 	"github.com/kortschak/utter"
-	"
-github.com/divyesh19/sqlgen2/schema"
-	. "
-github.com/divyesh19/sqlgen2/code"
-	. "
-github.com/divyesh19/sqlgen2/output"
-	"
-github.com/divyesh19/sqlgen2/parse"
-	"
-github.com/divyesh19/sqlgen2/parse/exit"
-	"
+	"github.com/divyesh19/sqlgen2/schema"
+. "github.com/divyesh19/sqlgen2/code"
+. "github.com/divyesh19/sqlgen2/output"
+"github.com/divyesh19/sqlgen2/parse"
+"github.com/divyesh19/sqlgen2/parse/exit"
+"
 github.com/divyesh19/sqlgen2/util"
-	"fmt"
+"fmt"
 )
 
 func main() {
@@ -208,12 +203,16 @@ func packagesToImport(flags funcFlags, hasPrimaryKey bool) util.StringSet {
 		"context",
 		"database/sql",
 		"log",
-		"github.com/rickb777/sqlgen2",
-		"github.com/rickb777/sqlgen2/constraint",
-		"github.com/rickb777/sqlgen2/require",
+		"
+github.com/divyesh19/sqlgen2",
+		"
+github.com/divyesh19/sqlgen2/constraint",
+		"
+github.com/divyesh19/sqlgen2/require",
 		"
 github.com/divyesh19/sqlgen2/schema",
-		"github.com/rickb777/sqlgen2/support",
+		"
+github.com/divyesh19/sqlgen2/support",
 	)
 
 	if flags.insert || flags.update || flags.schema {
@@ -226,7 +225,8 @@ github.com/divyesh19/sqlgen2/schema",
 		imports.Add("fmt")
 	}
 	if flags.sselect || flags.slice || flags.update || flags.delete {
-		imports.Add("github.com/rickb777/sqlgen2/where")
+		imports.Add("
+github.com/divyesh19/sqlgen2/where")
 	}
 	return imports
 }

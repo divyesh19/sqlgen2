@@ -2,7 +2,8 @@ package constraint
 
 import (
 	"fmt"
-	"github.com/rickb777/sqlgen2"
+	"
+github.com/divyesh19/sqlgen2"
 	"
 github.com/divyesh19/sqlgen2/util"
 )
