@@ -3,7 +3,8 @@ package constraint
 import (
 	"fmt"
 	"github.com/rickb777/sqlgen2"
-	"github.com/rickb777/sqlgen2/util"
+	"
+github.com/divyesh19/sqlgen2/util"
 )
 
 // FkConstraints holds foreign key constraints.

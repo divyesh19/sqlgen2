@@ -3,7 +3,8 @@ package code
 import (
 	"io"
 	"fmt"
-	"github.com/rickb777/sqlgen2/schema"
+	"
+github.com/divyesh19/sqlgen2/schema"
 )
 
 type SetterView struct {

@@ -6,9 +6,12 @@ import (
 	"os"
 	"strings"
 	"testing"
-	. "github.com/rickb777/sqlgen2/schema"
-	. "github.com/rickb777/sqlgen2/sqlgen/parse"
-	"github.com/rickb777/sqlgen2/sqlgen/parse/exit"
+	. "
+github.com/divyesh19/sqlgen2/schema"
+	. "
+github.com/divyesh19/sqlgen2/parse"
+	"
+github.com/divyesh19/sqlgen2/parse/exit"
 )
 
 func TestWriteRowsFunc1(t *testing.T) {

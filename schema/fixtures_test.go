@@ -1,7 +1,8 @@
 package schema
 
 import (
-	. "github.com/rickb777/sqlgen2/sqlgen/parse"
+	. "
+github.com/divyesh19/sqlgen2/parse"
 )
 
 var i64 = Type{Name: "int64", Base: Int64}

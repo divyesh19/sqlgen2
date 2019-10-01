@@ -1,7 +1,8 @@
 package parse
 
 import (
-	"github.com/rickb777/sqlgen2/sqlgen/parse/exit"
+	"
+github.com/divyesh19/sqlgen2/parse/exit"
 	"go/ast"
 	"go/types"
 	"fmt"

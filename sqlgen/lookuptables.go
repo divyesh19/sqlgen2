@@ -1,8 +1,10 @@
 package main
 
 import (
-	. "github.com/rickb777/sqlgen2/schema"
-	"github.com/rickb777/sqlgen2/sqlgen/parse"
+	. "
+github.com/divyesh19/sqlgen2/schema"
+	"
+github.com/divyesh19/sqlgen2/parse"
 	"sort"
 	"strings"
 )

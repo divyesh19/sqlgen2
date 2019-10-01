@@ -1,8 +1,10 @@
 package sqlgen2
 
 import (
-	"github.com/rickb777/sqlgen2/schema"
-	"github.com/rickb777/sqlgen2/util"
+	"
+github.com/divyesh19/sqlgen2/schema"
+	"
+github.com/divyesh19/sqlgen2/util"
 	"log"
 	"context"
 	"database/sql"

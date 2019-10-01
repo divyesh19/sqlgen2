@@ -6,7 +6,8 @@ import (
 	. "strings"
 
 	"bitbucket.org/pkg/inflect"
-	"github.com/rickb777/sqlgen2/schema"
+	"
+github.com/divyesh19/sqlgen2/schema"
 )
 
 const sectionBreak = "\n//--------------------------------------------------------------------------------"

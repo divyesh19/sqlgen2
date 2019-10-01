@@ -4,8 +4,10 @@ import (
 	"fmt"
 	"io"
 	"sort"
-	"github.com/rickb777/sqlgen2/schema"
-	"github.com/rickb777/sqlgen2/util"
+	"
+github.com/divyesh19/sqlgen2/schema"
+	"
+github.com/divyesh19/sqlgen2/util"
 )
 
 func ImportsForFields(table *schema.TableDescription, packages util.StringSet) {

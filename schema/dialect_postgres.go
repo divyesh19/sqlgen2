@@ -2,7 +2,8 @@ package schema
 
 import (
 	"fmt"
-	"github.com/rickb777/sqlgen2/sqlgen/parse"
+	"
+github.com/divyesh19/sqlgen2/parse"
 	"bytes"
 	"strconv"
 	"io"

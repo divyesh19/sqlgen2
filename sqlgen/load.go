@@ -1,14 +1,19 @@
-package main
+
+github.com/divyesh19/sqlgen2/parsepackage main
 
 import (
 	"fmt"
 	"go/types"
 	"strings"
 	. "github.com/acsellers/inflections"
-	. "github.com/rickb777/sqlgen2/schema"
-	"github.com/rickb777/sqlgen2/sqlgen/parse"
-	"github.com/rickb777/sqlgen2/sqlgen/parse/exit"
-	"github.com/rickb777/sqlgen2/sqlgen/output"
+	. "
+github.com/divyesh19/sqlgen2/schema"
+	"
+github.com/divyesh19/sqlgen2/parse"
+	"
+github.com/divyesh19/sqlgen2/parse/exit"
+	"
+github.com/divyesh19/sqlgen2/output"
 	"sort"
 	"github.com/kortschak/utter"
 )

@@ -9,12 +9,18 @@ import (
 	"strings"
 	"time"
 	"github.com/kortschak/utter"
-	"github.com/rickb777/sqlgen2/schema"
-	. "github.com/rickb777/sqlgen2/sqlgen/code"
-	. "github.com/rickb777/sqlgen2/sqlgen/output"
-	"github.com/rickb777/sqlgen2/sqlgen/parse"
-	"github.com/rickb777/sqlgen2/sqlgen/parse/exit"
-	"github.com/rickb777/sqlgen2/util"
+	"
+github.com/divyesh19/sqlgen2/schema"
+	. "
+github.com/divyesh19/sqlgen2/code"
+	. "
+github.com/divyesh19/sqlgen2/output"
+	"
+github.com/divyesh19/sqlgen2/parse"
+	"
+github.com/divyesh19/sqlgen2/parse/exit"
+	"
+github.com/divyesh19/sqlgen2/util"
 	"fmt"
 )
 
@@ -205,7 +211,8 @@ func packagesToImport(flags funcFlags, hasPrimaryKey bool) util.StringSet {
 		"github.com/rickb777/sqlgen2",
 		"github.com/rickb777/sqlgen2/constraint",
 		"github.com/rickb777/sqlgen2/require",
-		"github.com/rickb777/sqlgen2/schema",
+		"
+github.com/divyesh19/sqlgen2/schema",
 		"github.com/rickb777/sqlgen2/support",
 	)
 

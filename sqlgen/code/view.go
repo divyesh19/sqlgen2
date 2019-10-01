@@ -6,7 +6,8 @@ import (
 	"text/template"
 
 	. "github.com/acsellers/inflections"
-	"github.com/rickb777/sqlgen2/schema"
+	"
+github.com/divyesh19/sqlgen2/schema"
 	"bitbucket.org/pkg/inflect"
 	"github.com/rickb777/sqlgen2/constraint"
 )
