@@ -3,8 +3,7 @@ package output
 import (
 	"fmt"
 	"os"
-	"
-github.com/divyesh19/sqlgen2/parse/exit"
+	"github.com/divyesh19/sqlgen2/parse/exit"
 )
 
 var Verbose = false

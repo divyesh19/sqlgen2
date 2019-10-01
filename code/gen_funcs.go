@@ -2,8 +2,7 @@ package code
 
 import (
 	"io"
-	"
-github.com/divyesh19/sqlgen2/output"
+	"github.com/divyesh19/sqlgen2/output"
 	"fmt"
 )
 

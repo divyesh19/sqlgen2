@@ -3,12 +3,9 @@ package code
 import (
 	"bytes"
 	"testing"
-	"
-github.com/divyesh19/sqlgen2/parse/exit"
-	. "
-github.com/divyesh19/sqlgen2/schema"
-	. "
-github.com/divyesh19/sqlgen2/parse"
+	"github.com/divyesh19/sqlgen2/parse/exit"
+	. "github.com/divyesh19/sqlgen2/schema"
+	. "github.com/divyesh19/sqlgen2/parse"
 	"strings"
 )
 
