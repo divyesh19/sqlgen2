@@ -10,13 +10,12 @@ import (
 	"time"
 	"github.com/kortschak/utter"
 	"github.com/divyesh19/sqlgen2/schema"
-. "github.com/divyesh19/sqlgen2/code"
-. "github.com/divyesh19/sqlgen2/output"
-"github.com/divyesh19/sqlgen2/parse"
-"github.com/divyesh19/sqlgen2/parse/exit"
-"
-github.com/divyesh19/sqlgen2/util"
-"fmt"
+    . "github.com/divyesh19/sqlgen2/code"
+    . "github.com/divyesh19/sqlgen2/output"
+    "github.com/divyesh19/sqlgen2/parse"
+    "github.com/divyesh19/sqlgen2/parse/exit"
+    "github.com/divyesh19/sqlgen2/util"
+    "fmt"
 )
 
 func main() {
