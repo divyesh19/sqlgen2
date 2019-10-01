@@ -4,8 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 	"strings"
-	"
-github.com/divyesh19/sqlgen2/schema"
+	"github.com/divyesh19/sqlgen2/schema"
 )
 
 // Named creates NamedArg values; it is synonymous with sql.Named().

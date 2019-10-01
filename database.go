@@ -1,16 +1,13 @@
 package sqlgen2
 
 import (
-	"
-github.com/divyesh19/sqlgen2/schema"
-	"
-github.com/divyesh19/sqlgen2/util"
+	"github.com/divyesh19/sqlgen2/schema"
+	"github.com/divyesh19/sqlgen2/util"
 	"log"
 	"context"
 	"database/sql"
 	"strings"
-	"
-github.com/divyesh19/sqlgen2/require"
+	"github.com/divyesh19/sqlgen2/require"
 	"sync/atomic"
 )
 

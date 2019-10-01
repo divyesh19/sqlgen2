@@ -2,8 +2,7 @@ package sqlgen2
 
 import (
 	"testing"
-	"
-github.com/divyesh19/sqlgen2/schema"
+	"github.com/divyesh19/sqlgen2/schema"
 	"log"
 	"bytes"
 	"fmt"

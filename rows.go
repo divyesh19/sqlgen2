@@ -2,8 +2,7 @@ package sqlgen2
 
 import (
 	"database/sql"
-	"
-github.com/divyesh19/sqlgen2/util"
+	"github.com/divyesh19/sqlgen2/util"
 )
 
 // Rows provides a tool for scanning result *sql.Rows of arbitrary or varying length.
