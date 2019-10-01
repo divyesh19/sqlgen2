@@ -5,16 +5,11 @@ package demo
 import (
 	"context"
 	"database/sql"
-	"
-github.com/divyesh19/sqlgen2"
-	"
-github.com/divyesh19/sqlgen2/constraint"
-	"
-github.com/divyesh19/sqlgen2/require"
-	"
-github.com/divyesh19/sqlgen2/schema"
-	"
-github.com/divyesh19/sqlgen2/support"
+	"github.com/divyesh19/sqlgen2"
+	"github.com/divyesh19/sqlgen2/constraint"
+	"github.com/divyesh19/sqlgen2/require"
+	"github.com/divyesh19/sqlgen2/schema"
+	"github.com/divyesh19/sqlgen2/support"
 	"log"
 )
 

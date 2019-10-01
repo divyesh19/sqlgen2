@@ -1,12 +1,9 @@
 package vanilla
 
 import (
-	"
-github.com/divyesh19/sqlgen2/require"
-	"
-github.com/divyesh19/sqlgen2/where"
-	"
-github.com/divyesh19/sqlgen2/support"
+	"github.com/divyesh19/sqlgen2/require"
+	"github.com/divyesh19/sqlgen2/where"
+	"github.com/divyesh19/sqlgen2/support"
 )
 
 // SliceStringColumn gets a string column for all rows that match the 'where' condition.

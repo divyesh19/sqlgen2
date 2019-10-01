@@ -4,8 +4,7 @@ import (
 	. "fmt"
 	"io"
 
-	"
-github.com/divyesh19/sqlgen2/schema"
+	"github.com/divyesh19/sqlgen2/schema"
 	"strings"
 )
 

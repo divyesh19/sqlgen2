@@ -3,10 +3,8 @@ package where_test
 import (
 	"reflect"
 	"testing"
-	. "
-github.com/divyesh19/sqlgen2/where"
-	"
-github.com/divyesh19/sqlgen2/schema"
+	. "github.com/divyesh19/sqlgen2/where"
+	"github.com/divyesh19/sqlgen2/schema"
 )
 
 func TestBuildWhereClause_happyCases(t *testing.T) {

@@ -4,12 +4,9 @@ import (
 	"database/sql"
 	"fmt"
 	"strings"
-	"
-github.com/divyesh19/sqlgen2"
-	"
-github.com/divyesh19/sqlgen2/require"
-	"
-github.com/divyesh19/sqlgen2/where"
+	"github.com/divyesh19/sqlgen2"
+	"github.com/divyesh19/sqlgen2/require"
+	"github.com/divyesh19/sqlgen2/where"
 )
 
 // ReplaceTableName replaces all occurrences of "{TABLE}" with the table's name.
