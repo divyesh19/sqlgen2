@@ -1,10 +1,8 @@
 package main
 
 import (
-	. "
-github.com/divyesh19/sqlgen2/schema"
-	"
-github.com/divyesh19/sqlgen2/parse"
+	. "github.com/divyesh19/sqlgen2/schema"
+	"github.com/divyesh19/sqlgen2/parse"
 	"sort"
 	"strings"
 )
