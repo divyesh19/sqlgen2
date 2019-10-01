@@ -202,16 +202,11 @@ func packagesToImport(flags funcFlags, hasPrimaryKey bool) util.StringSet {
 		"context",
 		"database/sql",
 		"log",
-		"
-github.com/divyesh19/sqlgen2",
-		"
-github.com/divyesh19/sqlgen2/constraint",
-		"
-github.com/divyesh19/sqlgen2/require",
-		"
-github.com/divyesh19/sqlgen2/schema",
-		"
-github.com/divyesh19/sqlgen2/support",
+		"github.com/divyesh19/sqlgen2",
+		"github.com/divyesh19/sqlgen2/constraint",
+		"github.com/divyesh19/sqlgen2/require",
+		"github.com/divyesh19/sqlgen2/schema",
+		"github.com/divyesh19/sqlgen2/support",
 	)
 
 	if flags.insert || flags.update || flags.schema {
@@ -224,8 +219,7 @@ github.com/divyesh19/sqlgen2/support",
 		imports.Add("fmt")
 	}
 	if flags.sselect || flags.slice || flags.update || flags.delete {
-		imports.Add("
-github.com/divyesh19/sqlgen2/where")
+		imports.Add("github.com/divyesh19/sqlgen2/where")
 	}
 	return imports
 }
