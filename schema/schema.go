@@ -1,8 +1,7 @@
 package schema
 
 import (
-	. "
-github.com/divyesh19/sqlgen2/parse"
+	. "github.com/divyesh19/sqlgen2/parse"
 	"strings"
 	"sort"
 	"fmt"
