@@ -5,5 +5,4 @@
 // makes it easy to write flexible yet reliable and high-performance database code.
 //
 // See the README for further details: https://
-github.com/divyesh19/sqlgen2/blob/master/README.md
 package sqlgen2
