@@ -1,5 +1,5 @@
 
-github.com/divyesh19/sqlgen2/parsepackage main
+package main
 
 import (
 	"fmt"
